@@ -1,28 +1,26 @@
 {
-  "name": "babel-plugin-react-require",
-  "version": "3.0.0",
-  "description": "Babel plugin that adds React import declaration if file contains JSX tags.",
+  "name": "babel-plugin-jsx-import",
+  "version": "1.0.0",
+  "description": "Babel plugin that adds React (or other pragma) import declaration if file contains JSX tags.",
   "keywords": [
     "babel",
     "babel-plugin",
     "react",
     "jsx"
   ],
-  "homepage": "https://github.com/vslinko/babel-plugin-react-require",
+  "homepage": "https://github.com/staydecent/babel-plugin-jsx-import",
   "bugs": {
-    "url": "https://github.com/vslinko/babel-plugin-react-require/issues",
-    "email": "vslinko@yahoo.com"
+    "url": "https://github.com/staydecent/babel-plugin-jsx-import/issues"
   },
   "license": "MIT",
   "author": {
-    "name": "Vyacheslav Slinko",
-    "email": "vslinko@yahoo.com",
-    "url": "https://twitter.com/vslinko"
+    "name": "Adrian Unger",
+    "url": "https://twitter.com/staydecent"
   },
   "main": "lib",
   "repository": {
     "type": "git",
-    "url": "vslinko/babel-plugin-react-require"
+    "url": "staydecent/babel-plugin-jsx-import"
   },
   "scripts": {
     "clean": "rimraf lib",

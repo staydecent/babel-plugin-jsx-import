@@ -10,16 +10,22 @@ export default function ({ types: t }) {
           file.set('hasJSX', false);
         },
 
-        exit({ node, scope }, { file }) {
-          if (!(file.get('hasJSX') && !scope.hasBinding('React'))) {
+        exit({ node, scope }, {
+          file,
+          opts: {
+            identifier = 'React',
+            moduleName = 'react'
+          }
+        }) {
+          if (!(file.get('hasJSX') && !scope.hasBinding(identifier))) {
             return;
           }
 
-          const reactImportDeclaration = t.importDeclaration([
-            t.importDefaultSpecifier(t.identifier('React')),
-          ], t.stringLiteral('react'));
+          const jsxImportDeclaration = t.importDeclaration([
+            t.importDefaultSpecifier(t.identifier(identifier)),
+          ], t.stringLiteral(moduleName));
 
-          node.body.unshift(reactImportDeclaration);
+          node.body.unshift(jsxImportDeclaration);
         },
       },
     },
